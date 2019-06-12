@@ -33,16 +33,15 @@ public class FindKthElement {
    * In space terms we get O(1) because we are not using any auxiliary data structure.
    */
   public ListNode Find(ListNode listNode, int k) {
-    ListNode reversedList = reverseLinkedList.reverseIterative(listNode);
-    ListNode result = reversedList;
+    ListNode reversedList = reverseLinkedList.reverseIterative(listNode);    
     while (k > 0)
     {
-      result = result.getNext();
-      if (result == null)
+      resultedList = resultedList.getNext();
+      if (resultedList == null)
         throw new IndexOutOfBoundsException();
       k--;
     }
-    return result;
+    return resultedList;
   }
 
   /**
