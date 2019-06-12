@@ -49,18 +49,17 @@ public class FindKthElement {
    * The complexity order in time and space terms is the same than the previous approach.
    */
   public ListNode Find2(ListNode listNode, int k) {
-    int size = CalculateListSize(listNode);
-    int length = size;
+    int size = CalculateListSize(listNode);    
     if (k > (size - 1)) throw new IndexOutOfBoundsException();
-    ListNode result = listNode;
+    
     int n = size - 1 - k;
     // System.out.println("n=" + n);
     while (n > 0)
     {
-      result = result.getNext();
+      listNode = listNode.getNext();
       n--;
     }
-    return result;
+    return listNode;
   }
 
   /**
@@ -76,13 +75,12 @@ public class FindKthElement {
       pointer2 = pointer2.getNext();
     }
 
-    ListNode result = listNode;
     while (pointer2 != null)
     {
-      result = result.getNext();
+      listNode = listNode.getNext();
       pointer2 = pointer2.getNext();
     }
-    return result;
+    return listNode;
   }
 
   private int CalculateListSize(ListNode listNode) {
