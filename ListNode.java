@@ -24,19 +24,19 @@
  */
 public class ListNode<T> {
 
-  private T data;
+  private T nodeData;
   private ListNode<T> next;
 
-  public ListNode(T data) {
-    this.data = data;
+  public ListNode(T nodeData) {
+    this.nodeData = nodeData;
   }
 
-  public T getData() {
-    return data;
+  public T getNodeData() {
+    return nodeData;
   }
 
-  public void setData(T data) {
-    this.data = data;
+  public void setNodeData(T nodeData) {
+    this.nodeData = nodeData;
   }
 
   public ListNode<T> getNext() {
@@ -47,7 +47,8 @@ public class ListNode<T> {
     this.next = next;
   }
 
-  @Override public boolean equals(Object o) {
+  @Override 
+  public boolean equals(Object o) {
     if (this == o) return true;
     if (!(o instanceof ListNode)) return false;
 
@@ -58,11 +59,13 @@ public class ListNode<T> {
     return true;
   }
 
-  @Override public int hashCode() {
+  @Override 
+  public int hashCode() {
     return data.hashCode();
   }
 
-  @Override public String toString() {
+  @Override 
+  public String toString() {
     return "ListNode{" + "data=" + data + ", next=" + next + '}';
   }
 }
