@@ -32,7 +32,7 @@ public class SplitArray {
 	 * expensive. The space complexity of this algorithm is O(1) because we are not
 	 * using any additional data structure.
 	 */
-	public void SplitSorting(int array[]) {
+	public void SplitSorting(int[] array) {
 		boolean flag = true;
 		while (flag)
 		{
@@ -56,7 +56,7 @@ public class SplitArray {
 	 * number of elements in the array. The space complexity is also O(1) because we are not using any additional
 	 * data structure here as well.
 	 */
-	public void SplitSwappingIterative(int array[]) {
+	public void SplitSwappingIterative(int[] array) {
 		int left = 0;
 		int right = array.length - 1;
 		while (left < right)
@@ -70,10 +70,8 @@ public class SplitArray {
 				right--;
 			} else
 			{
-				if (!shouldChangeLeft)
-					left++;
-				else if (!shouldChangeRight)
-					right--;
+				if (!shouldChangeLeft) left++;
+				else if (!shouldChangeRight) right--;
 			}
 		}
 	}
@@ -82,7 +80,7 @@ public class SplitArray {
 	 * Using partition Method of Quicksort to split the array.
 	 * Its called Hoare's Partitioning Algorithm
 	 */
-	public void SplitSwappingPartition(int array[]) {
+	public void SplitSwappingPartition(int[] array) {
 		int left = 0;
 		int right = array.length - 1;
 		while (left < right)
